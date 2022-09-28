@@ -17,7 +17,7 @@ export default function HomePage() {
   /*
     These are mock values. Setting these values lets you preview the loading markup and the empty state.
   */
-  const isLoading = true;
+  const isLoading = false;
   const isRefetching = false;
   const QRCodes = [];
   /* loadingMarkup uses the loading component from AppBridge and components from Polaris  */
