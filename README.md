@@ -4,6 +4,8 @@ Shopify Node app that enable merchants to create QR codes for specific products 
 
 QR codes can include specific discounts, and can link to either the online store product page or directly to checkout with the product added to the cart.
 
+![screencapture-schoen-testing-store-myshopify-admin-apps-qr-codes-app-2022-09-28-15_54_30](https://user-images.githubusercontent.com/42308135/192902700-d82201d4-6720-44de-8d0a-b0fde9fa3e90.png)
+
 # It uses the Shopify App Template - Node
 
 This is a template for building a [Shopify app](https://shopify.dev/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.
