@@ -1,4 +1,8 @@
-# Shopify App Template - Node
+# Shopify QR Code Generator App
+
+Shopify Node app that enable merchants to create QR codes for specific products and track the number of scans for each QR code. QR codes can include specific discounts, and can link to either the online store product page or directly to checkout with the product added to the cart.
+
+# It uses the Shopify App Template - Node
 
 This is a template for building a [Shopify app](https://shopify.dev/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.
 
