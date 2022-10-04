@@ -50,7 +50,7 @@ export default defineConfig({
   resolve: {
     preserveSymlinks: true,
   },
-  server: {
+  server: { // Any routes that don't start with /api are handled by the client by default, so you'll add some proxy rules to handle the /qrcodes/ URLs.
     host: process.env.SHOPIFY_VITE_HMR_USE_WSS ? "0.0.0.0" : "localhost",
     port: process.env.FRONTEND_PORT,
     hmr: hmrConfig,
