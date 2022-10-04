@@ -12,6 +12,9 @@ import productCreator from "./helpers/product-creator.js";
 import redirectToAuth from "./helpers/redirect-to-auth.js";
 import { BillingInterval } from "./helpers/ensure-billing.js";
 import { AppInstallations } from "./app_installations.js";
+import applyQrCodeApiEndpoints from "./middleware/qr-code-api.js";
+import { QRCodesDB } from "./qr-codes-db.js";
+
 
 const USE_ONLINE_TOKENS = false;
 
