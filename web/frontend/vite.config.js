@@ -1,8 +1,7 @@
-import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import https from "https";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 if (
   process.env.npm_lifecycle_event === "build" &&
@@ -52,12 +51,14 @@ export default defineConfig({
     preserveSymlinks: true,
   },
   server: {
-    host: "localhost",
+    host: process.env.SHOPIFY_VITE_HMR_USE_WSS ? "0.0.0.0" : "localhost",
     port: process.env.FRONTEND_PORT,
     hmr: hmrConfig,
     proxy: {
       "^/(\\?.*)?$": proxyOptions,
       "^/api(/|(\\?.*)?$)": proxyOptions,
+      "^/qrcodes/[0-9]+/image(\\?.*)?$": proxyOptions,
+      "^/qrcodes/[0-9]+/scan(\\?.*)?$": proxyOptions,
     },
   },
 });
