@@ -1,7 +1,6 @@
-import react from "@vitejs/plugin-react";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
 import { defineConfig } from "vite";
+import https from "https";
+import react from "@vitejs/plugin-react";
 
 if (
   process.env.npm_lifecycle_event === "build" &&
@@ -13,6 +12,7 @@ if (
   );
 }
 
+const root = new URL(".", import.meta.url).pathname;
 const proxyOptions = {
   target: `http://127.0.0.1:${process.env.BACKEND_PORT}`,
   changeOrigin: false,
@@ -21,7 +21,7 @@ const proxyOptions = {
 };
 
 const host = process.env.HOST
-  ? process.env.HOST.replace(/https?:\/\//, "")
+  ? process.env.HOST.replace(/https:\/\//, "")
   : "localhost";
 
 let hmrConfig;
@@ -42,7 +42,7 @@ if (host === "localhost") {
 }
 
 export default defineConfig({
-  root: dirname(fileURLToPath(import.meta.url)),
+  root,
   plugins: [react()],
   define: {
     "process.env.SHOPIFY_API_KEY": JSON.stringify(process.env.SHOPIFY_API_KEY),
@@ -50,8 +50,8 @@ export default defineConfig({
   resolve: {
     preserveSymlinks: true,
   },
-  server: { // Any routes that don't start with /api are handled by the client by default, so you'll add some proxy rules to handle the /qrcodes/ URLs.
-    host: process.env.SHOPIFY_VITE_HMR_USE_WSS ? "0.0.0.0" : "localhost",
+  server: {
+    host: "localhost",
     port: process.env.FRONTEND_PORT,
     hmr: hmrConfig,
     proxy: {
