@@ -24,7 +24,7 @@ import { AlertMinor, ImageMajor } from "@shopify/polaris-icons";
 import { useCallback, useState } from "react";
 
 /* Import the useAuthenticatedFetch hook included in the Node app template */
-import { useAuthenticatedFetch } from "../hooks";
+import { useAppQuery, useAuthenticatedFetch } from "../hooks";
 
 /* Import custom hooks for forms */
 import { notEmptyString, useField, useForm } from "@shopify/react-form";
