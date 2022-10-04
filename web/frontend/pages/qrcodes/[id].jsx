@@ -1,18 +1,10 @@
-import { TitleBar } from "@shopify/app-bridge-react";
-import {
-  Card,
-  Layout,
-  Loading,
-  Page,
-  SkeletonBodyText,
-} from "@shopify/polaris";
-import { QRCodeForm } from "../../components";
-
+import { Loading, TitleBar } from "@shopify/app-bridge-react";
+import { Card, Layout, Page, SkeletonBodyText } from "@shopify/polaris";
 import { useParams } from "react-router-dom";
+import { QRCodeForm } from "../../components";
 import { useAppQuery } from "../../hooks";
 
 export default function QRCodeEdit() {
-  const breadcrumbs = [{ content: "QR codes", url: "/" }];
   const { id } = useParams();
 
   /*
@@ -31,6 +23,8 @@ export default function QRCodeEdit() {
       refetchOnReconnect: false,
     },
   });
+
+  const breadcrumbs = [{ content: "QR codes", url: "/" }];
 
   /* Loading action and markup that uses App Bridge and Polaris components */
   if (isLoading || isRefetching) {
