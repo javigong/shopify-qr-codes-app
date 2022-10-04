@@ -4,7 +4,18 @@ Shopify Node app that enable merchants to create QR codes for specific products 
 
 QR codes can include specific discounts, and can link to either the online store product page or directly to checkout with the product added to the cart.
 
-![screencapture-schoen-testing-store-myshopify-admin-apps-qr-codes-app-2022-09-28-15_54_30](https://user-images.githubusercontent.com/42308135/192902700-d82201d4-6720-44de-8d0a-b0fde9fa3e90.png)
+![screencapture-schoen-testing-store-myshopify-admin-apps-qr-codes-app-2022-10-04-11_31_34](https://user-images.githubusercontent.com/42308135/193897836-21f5790f-69b3-44fe-8b4a-0eda0f440895.png)
+
+![screencapture-schoen-testing-store-myshopify-admin-apps-46cea399e9c37e395faa97a6bf0bc717-qrcodes-new-2022-10-04-11_27_06](https://user-images.githubusercontent.com/42308135/193897881-2a80b3f3-c212-4bb4-a928-1a0c4256e0df.png)
+
+![screencapture-schoen-testing-store-myshopify-admin-apps-46cea399e9c37e395faa97a6bf0bc717-qrcodes-new-2022-10-04-11_28_13](https://user-images.githubusercontent.com/42308135/193897877-61fd2108-e3bc-4272-a069-04cf7efad7b2.png)
+
+![screencapture-schoen-testing-store-myshopify-admin-apps-46cea399e9c37e395faa97a6bf0bc717-qrcodes-3-2022-10-04-11_28_30](https://user-images.githubusercontent.com/42308135/193897875-f4794579-057f-413b-8897-43d5eff9ef0b.png)
+
+![screencapture-schoen-testing-store-myshopify-admin-apps-46cea399e9c37e395faa97a6bf0bc717-qrcodes-new-2022-10-04-11_27_42](https://user-images.githubusercontent.com/42308135/193897879-c768d50d-298f-45b1-8898-900907b32ab1.png)
+
+![screencapture-schoen-testing-store-myshopify-admin-apps-qr-codes-app-2022-10-04-11_31_10](https://user-images.githubusercontent.com/42308135/193897871-462d2bfc-f57f-4eaa-a93f-044bd974cafe.png)
+
 
 # It uses the Shopify App Template - Node
 
