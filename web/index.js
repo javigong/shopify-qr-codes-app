@@ -24,7 +24,11 @@ const PORT = parseInt(process.env.BACKEND_PORT || process.env.PORT, 10);
 const DEV_INDEX_PATH = `${process.cwd()}/frontend/`;
 const PROD_INDEX_PATH = `${process.cwd()}/frontend/dist/`;
 
-
+const dbFile = join(process.cwd(), "database.sqlite");
+const sessionDb = new Shopify.Session.SQLiteSessionStorage(dbFile);
+// Initialize SQLite DB
+QRCodesDB.db = sessionDb.db;
+QRCodesDB.init();
 Shopify.Context.initialize({
   API_KEY: process.env.SHOPIFY_API_KEY,
   API_SECRET_KEY: process.env.SHOPIFY_API_SECRET,
@@ -33,8 +37,7 @@ Shopify.Context.initialize({
   HOST_SCHEME: process.env.HOST.split("://")[0],
   API_VERSION: LATEST_API_VERSION,
   IS_EMBEDDED_APP: true,
-  // This should be replaced with your preferred storage strategy
-  SESSION_STORAGE: new Shopify.Session.SQLiteSessionStorage(DB_PATH),
+  SESSION_STORAGE: sessionDb,
 });
 
 Shopify.Webhooks.Registry.addHandler("APP_UNINSTALLED", {
